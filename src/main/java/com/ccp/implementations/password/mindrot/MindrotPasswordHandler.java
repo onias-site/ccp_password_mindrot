@@ -4,6 +4,10 @@ import org.mindrot.jbcrypt.BCrypt;
 
 import com.ccp.especifications.password.CcpPasswordHandler;
 
+/**
+ * Implementação de {@code CcpPasswordHandler} usando BCrypt (fator de custo 12) via biblioteca
+ * jBCrypt. Oferece geração de hash ({@code getHash}) e verificação ({@code matches}).
+ */
 class MindrotPasswordHandler implements CcpPasswordHandler {
 
 	
