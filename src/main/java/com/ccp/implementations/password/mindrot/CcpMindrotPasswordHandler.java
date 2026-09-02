@@ -9,6 +9,7 @@ import com.ccp.especifications.password.CcpPasswordHandler;
 public class CcpMindrotPasswordHandler implements CcpInstanceProvider<CcpPasswordHandler> {
 
 	public CcpPasswordHandler getInstance() {
-		return new MindrotPasswordHandler();
+		MindrotPasswordHandler mindrotPasswordHandler = new MindrotPasswordHandler();
+		return mindrotPasswordHandler;
 	}
 }
