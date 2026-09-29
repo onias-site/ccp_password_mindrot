@@ -4,7 +4,7 @@ import com.ccp.dependency.injection.CcpInstanceProvider;
 import com.ccp.especifications.password.CcpPasswordHandler;
 
 /**
- * Provedor de DI que expõe {@code MindrotPasswordHandler} como implementação de {@code CcpPasswordHandler}.
+ * DI provider that exposes {@code MindrotPasswordHandler} as the {@code CcpPasswordHandler} implementation.
  */
 public class CcpMindrotPasswordHandler implements CcpInstanceProvider<CcpPasswordHandler> {
 
