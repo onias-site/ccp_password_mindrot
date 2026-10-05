@@ -8,6 +8,10 @@ import com.ccp.especifications.password.CcpPasswordHandler;
  */
 public class CcpMindrotPasswordHandler implements CcpInstanceProvider<CcpPasswordHandler> {
 
+	/**
+	 * Builds the BCrypt implementation of {@code CcpPasswordHandler}.
+	 * @return a new {@code MindrotPasswordHandler}
+	 */
 	public CcpPasswordHandler getInstance() {
 		MindrotPasswordHandler mindrotPasswordHandler = new MindrotPasswordHandler();
 		return mindrotPasswordHandler;

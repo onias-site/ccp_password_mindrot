@@ -11,6 +11,12 @@ import com.ccp.especifications.password.CcpPasswordHandler;
 class MindrotPasswordHandler implements CcpPasswordHandler {
 
 	
+	/**
+	 * Checks the plain password against the BCrypt hash.
+	 * @param password the plain password
+	 * @param hash the BCrypt hash
+	 * @return {@code true} when the password matches
+	 */
 	public boolean matches(String password, String hash) {
 		boolean passwordMatches = BCrypt.checkpw(password, hash);
 		return 	passwordMatches;
@@ -18,6 +24,11 @@ class MindrotPasswordHandler implements CcpPasswordHandler {
 	}
 
 	
+	/**
+	 * Hashes the password with a new salt of cost factor 12.
+	 * @param password the plain password
+	 * @return the BCrypt hash
+	 */
 	public String getHash(String password) {
 		String salt = BCrypt.gensalt(12);
 		String passwordHash = BCrypt.hashpw(password, salt);
